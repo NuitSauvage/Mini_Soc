@@ -11,18 +11,25 @@ The goal is not to automate security decisions but to reduce analyst triage time
 MiniSOC/
 │
 ├── data/
-│   ├── HDFS_2k.log_structured.csv
+│   ├── raw/
+│   ├── HDFS_2k.log
 │   ├── email_reports.csv
 │   ├── auth_logs.csv
 │   └── endpoint_logs.csv
 │
-├── minisoc_app.py
-├── minisoc_analysis.ipynb
-├── utils.py
-├── llm_helper_local.py
-├── llm_helper_local_constrained_reasoning.py
+│
+├── notebooks/
+│   └── minisoc_analysis.ipynb
+│
+├── src/
+│   ├── minisoc_app.py
+│   ├── utils.py
+│   ├── llm_helper_local.py
+│   └── llm_helper_local_constrained_reasoning.py
+│
 ├── requirements.txt
-└── README.md
+├── README.md
+└── .gitignore
 
 - `data/` contains simulated SOC logs
 - `minisoc_analysis.ipynb` explains the analysis pipeline
